@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x751f;&#x7269;&#x4fe1;&#x606f;&#x5b66;&#x5206;&#x6790;&#x6587;&#x6863;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="生物信息学分析文档">生物信息学分析文档</h1>
+<h2 id="项目概述">项目概述</h2>
+<p>本项目针对JQ-1药物处理的293细胞梯度实验数据进行分析。实验采用N3K醛酮标记，明确为非MICC文库类型。数据包含7个不同处理条件的barcode，涵盖不同药物浓度（200nM、500nM）和处理时间（2h、4h、8h）的组合，以及无药物对照组。</p>
+<h2 id="数据信息">数据信息</h2>
+<h3 id="数据路径">数据路径</h3>
+<ul>
+<li><strong>完整数据路径</strong>：<code>/zfswh7/solexa/homeward_A/homeward144A/Zebra/P25Z11900N0021_HUMhyyU/WHB5EXONPEP00101476/</code></li>
+</ul>
+<h3 id="实验设计">实验设计</h3>
+<ul>
+<li><strong>barcode 1</strong>: 200nM/2h</li>
+<li><strong>barcode 2</strong>: 500nM/2h</li>
+<li><strong>barcode 3</strong>: 200nM/4h</li>
+<li><strong>barcode 4</strong>: 500nM/4h</li>
+<li><strong>barcode 13</strong>: 293无用药对照（N3K标记）</li>
+<li><strong>barcode 14</strong>: 200nM/8h</li>
+<li><strong>barcode 15</strong>: 500nM/8h</li>
+</ul>
+<h3 id="数据统计">数据统计</h3>
+<ul>
+<li><strong>项目编号</strong>: P25Z11900N0021_HUMhyyU（人内部研发项目）</li>
+<li><strong>总数据量</strong>: 约85.5G</li>
+<li><strong>数据分布均匀性</strong>: 各barcode数据量占比在12.20%-14.69%之间，符合梯度实验设计要求</li>
+</ul>
+<h2 id="质量评估指标">质量评估指标</h2>
+<table>
+<thead>
+<tr>
+<th>样本ID</th>
+<th>实验条件</th>
+<th>原始读数</th>
+<th>清洁读数</th>
+<th>比对读数</th>
+<th>重复率</th>
+<th>去重后读数</th>
+<th>峰值数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>13</td>
+<td>n3k_ctrl</td>
+<td>63,595,019</td>
+<td>63,594,996</td>
+<td>61,917,541</td>
+<td>0.829</td>
+<td>10,717,145</td>
+<td>637</td>
+</tr>
+<tr>
+<td>14</td>
+<td>200nM_8h</td>
+<td>64,585,197</td>
+<td>64,585,174</td>
+<td>62,517,373</td>
+<td>0.830</td>
+<td>10,765,170</td>
+<td>542</td>
+</tr>
+<tr>
+<td>15</td>
+<td>500nM_8h</td>
+<td>54,545,214</td>
+<td>54,545,194</td>
+<td>52,929,657</td>
+<td>0.826</td>
+<td>9,334,947</td>
+<td>383</td>
+</tr>
+<tr>
+<td>1</td>
+<td>200nM_2h</td>
+<td>62,109,287</td>
+<td>62,109,264</td>
+<td>60,058,194</td>
+<td>0.819</td>
+<td>11,060,981</td>
+<td>721</td>
+</tr>
+<tr>
+<td>2</td>
+<td>500nM_2h</td>
+<td>62,180,032</td>
+<td>62,180,004</td>
+<td>60,155,726</td>
+<td>0.823</td>
+<td>10,783,905</td>
+<td>664</td>
+</tr>
+<tr>
+<td>3</td>
+<td>200nM_4h</td>
+<td>55,206,505</td>
+<td>55,206,482</td>
+<td>53,174,777</td>
+<td>0.807</td>
+<td>10,485,462</td>
+<td>651</td>
+</tr>
+<tr>
+<td>4</td>
+<td>500nM_4h</td>
+<td>65,684,842</td>
+<td>65,684,807</td>
+<td>63,543,428</td>
+<td>0.842</td>
+<td>10,175,043</td>
+<td>607</td>
+</tr>
+</tbody>
+</table>
+<h2 id="可视化结果">可视化结果</h2>
+<p><img src="file:////home/xym/Downloads/MICC-seq-main/test_proj/wj_n3kJQ1_250829/files/micc_SE_n3k_1.png" alt="Figure 1"></p>
+<p><em>图1: micc_SE_n3k_1 - 显示Hi-C数据的TAD（拓扑关联域）结构</em></p>
+<p><img src="file:////home/xym/Downloads/MICC-seq-main/test_proj/wj_n3kJQ1_250829/files/wj_n3kJQ1_250829_n3k_maxBinCount_promoter_density.png" alt="Figure 2"></p>
+<p><em>图2: wj_n3kJQ1_250829_n3k_maxBinCount_promoter_density - 启动子区域信号强度分布</em></p>
+<p><img src="file:////home/xym/Downloads/MICC-seq-main/test_proj/wj_n3kJQ1_250829/files/wj_n3kJQ1_250829_n3k_maxBinCount_super_enhancer_density.png" alt="Figure 3"></p>
+<p><em>图3: wj_n3kJQ1_250829_n3k_maxBinCount_super_enhancer_density - 超级增强子区域信号强度分布</em></p>
+<h2 id="分析方法总结">分析方法总结</h2>
+<p>本项目的生物信息学分析采用了以下方法流程：</p>
+<ul>
+<li><strong>质量控制与接头修剪</strong>：使用fastp进行质量控制、接头修剪，并生成HTML/JSON格式的质量报告</li>
+<li><strong>参考基因组比对</strong>：采用bowtie2进行敏感端到端比对，将reads映射到hg19参考基因组</li>
+<li><strong>重复标记与去除</strong>：使用picard MarkDuplicates识别并去除PCR重复，生成重复率质量评估指标</li>
+<li><strong>峰值识别</strong>：运用MACS2识别开放染色质区域（peaks），为ATAC-seq数据调用峰值</li>
+<li><strong>BigWig文件生成</strong>：通过bedtools将去重后的BAM转换为BED格式，降采样至1800万reads以保持覆盖均匀性</li>
+<li><strong>质量评估指标收集</strong>：提取关键指标包括原始读数、清洁读数、比对读数、重复率、去重后读数和峰值数量</li>
+<li><strong>基因组特征分析</strong>：生成100bp窗口的基因组覆盖文件，映射到超级增强子和启动子区域</li>
+<li><strong>并行处理</strong>：使用GNU parallel对多个样本进行并行处理，最大并发作业数为10</li>
+<li><strong>比较分析</strong>：加载基因组信号数据，进行标准化处理，计算log2倍数变化，生成密度图可视化处理效果</li>
+<li><strong>TAD可视化</strong>：使用hicPlotTADs工具从Hi-C数据生成拓扑关联域图，展示染色质结构和域边界</li>
+</ul>
+<hr>
+<p><em>文档生成时间：2025-09-05 18:39:33</em></p>
+
+            
+            
+        </body>
+        </html>

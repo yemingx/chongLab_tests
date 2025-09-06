@@ -1,0 +1,27 @@
+### 完整数据路径：
+/zfswh7/solexa/homeward_A/homeward144A/Zebra/P25Z11900N0021_HUMhyyU/WHB5EXONPEP00101476/
+
+### 数据处理要求总结：
+发件人王娟（wangjn@bgi.com）指定L02数据为其项目数据，具体要求如下：
+- **实验类型**：JQ-1药物处理的293梯度实验（使用N3K醛酮标记），明确说明**非MICC文库**。
+- **barcode处理细节**：
+  - barcode 1: 200nM/2h
+  - barcode 2: 500nM/2h
+  - barcode 3: 200nM/4h
+  - barcode 4: 500nM/4h
+  - barcode 13: 293无用药对照（N3K标记）
+  - barcode 14: 200nM/8h
+  - barcode 15: 500nM/8h
+- **额外说明**：发件人提及需进一步讨论分析内容（可提供文献参考），并需咨询"师傅"确认具体分析方向。
+
+### 数据统计信息（L02）：
+- **项目编号**：P25Z11900N0021_HUMhyyU（人内部研发项目）
+- **数据量**：7个barcode，总数据量约85.5G（详细分布如下）：
+  - barcode 1: 12.42G (13.89%)
+  - barcode 2: 12.44G (13.91%)
+  - barcode 3: 11.04G (12.35%)
+  - barcode 4: 13.14G (14.69%)
+  - barcode 13: 12.72G (14.22%)
+  - barcode 14: 12.92G (14.44%)
+  - barcode 15: 10.91G (12.20%)
+- **数据平衡性**：各barcode数据量分布均匀（占比12.20%-14.69%），符合梯度实验设计需求。

@@ -1,0 +1,131 @@
+[x-axis]
+fontsize=10
+
+[scale_bar]
+file_type = scalebar
+title = Scale bar track
+
+[MICC_EcoG]
+file = /research/xieyeming1/proj_2025/MICC_paper/hekMiccHia5_fullBlood/juicer_track_vs_gs/HekMiccEcoG_fullBlood/HekMiccEcoG_fullBlood_10000.cool
+title = MICC_EcoG
+colormap = Spectral_r
+depth = 2000000
+#min_value = 1
+#max_value = 0.03
+transform = log1p
+file_type = hic_matrix
+show_masked_bins = false
+
+[spacer]
+[bigwig file test3]
+file = hek_TE_chr7.bed
+# height of the track in cm (optional value)
+height = 4
+title = typical_enhancer
+color = grey
+file_type = bed
+
+[spacer]
+[bigwig file test1]
+file = hek_SE_chr7.bed
+# height of the track in cm (optional value)
+height = 4
+title = Super_enhancer
+color = grey
+file_type = bed
+
+[spacer]
+
+[bigwig file test2]
+file = hek_SEele_chr7.bed
+# height of the track in cm (optional value)
+height = 4
+title = SE_Element
+color = grey
+file_type = bed
+
+[spacer]
+
+
+[hic]
+file = /research/xieyeming1/proj_2023/hichew_paper_20230710/scHiC_benchmark/hichew/hichew_readID_validpair/combined_mcool_stack_bulk/hichew_chr7.cool
+title = Threshold 0.01
+colormap = Spectral_r
+depth = 2000000
+min_value = 1
+max_value = 60
+transform = log1p
+file_type = hic_matrix
+show_masked_bins = false
+
+[bigwig file test]
+file = track/15.dedup.bam.bw
+height = 4
+title = 500nM_8h
+color = grey
+min_value = 1
+max_value = 3
+
+
+[bigwig file test]
+file = track/14.dedup.bam.bw
+height = 4
+title = 200nM_8h
+color = grey
+min_value = 1
+max_value = 3
+
+
+[bigwig file test]
+file = track/4.dedup.bam.bw
+height = 4
+title = 500nM_4h
+color = grey
+min_value = 1
+max_value = 3
+
+
+[bigwig file test]
+file = track/3.dedup.bam.bw
+height = 4
+title = 200nM_4h
+color = grey
+min_value = 1
+max_value = 3
+
+
+[bigwig file test]
+file = track/2.dedup.bam.bw
+height = 4
+title = 500nM_2h
+color = grey
+min_value = 1
+max_value = 3
+
+
+[bigwig file test]
+file = track/1.dedup.bam.bw
+height = 4
+title = 200nM_2h
+color = grey
+min_value = 1
+max_value = 3
+
+[bigwig file test]
+file = track/13.dedup.bam.bw
+height = 4
+title = n3k_ctrl
+color = grey
+min_value = 1
+max_value = 3
+
+
+[spacer]
+
+
+[genes]
+file = /research/xieyeming1/proj_2021/cngb_backup/sz5/archive/genome/hg19/normal_chr_genes.gtf
+height = 4
+title = hg19 gene
+fontsize = 12
+file_type = bed
