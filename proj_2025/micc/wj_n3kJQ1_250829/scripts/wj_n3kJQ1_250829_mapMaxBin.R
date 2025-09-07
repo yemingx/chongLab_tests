@@ -19,8 +19,9 @@ library(purrr)
 npg_colors <- pal_npg()(10)
 hgd()
 setwd('/research/xieyeming1/proj_2025/MICC_paper/genometube/MICC-seq/test_proj/wj_n3kJQ1_250829/scripts')
+# setwd('')
 options(bedtools.path = "/research/xieyeming1/software/Miniconda/envs/fyt_py311/bin/")
-
+# options(bedtools.path = "~/.conda/envs/Bioinfo/bin/bedtools")
 # Create barcode treatment mapping table
 id_map <- data.frame(barcode = c(1, 2, 3, 4, 13, 14, 15),
   treatment = c("200nM_2h", "500nM_2h", "200nM_4h", "500nM_4h", "n3k_ctrl", "200nM_8h", "500nM_8h"))
